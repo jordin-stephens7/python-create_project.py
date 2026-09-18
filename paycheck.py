@@ -12,6 +12,10 @@ gross = hours * rate
 tax = gross * (tax_rate / 100)
 net = gross - tax
 
+print(f"Employee: {name}")
+print(f"Gross pay: ${gross:.2f}")
+print(f"Tax withheld: ${tax:.2f}")
+print(f"Net pay: ${net:.2f}")
 
 # Then calculate:
 #   gross pay     = hours worked * hourly rate
