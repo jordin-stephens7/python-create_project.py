@@ -8,15 +8,14 @@ hours_worked = float(input())
 hourly_rate = float(input())
 tax_rate = float(input())
 
-# Hours worked and the hourly rate can have a fraction in them, like 37.5
-# hours or 10.25 hours. Use float() for all three numbers, not int().
-# int("37.5") crashes.
-#
-# Then calculate:
-#   gross pay     = hours worked * hourly rate
-#   tax withheld  = gross pay * (tax rate / 100)
-#   net pay       = gross pay - tax withheld
-#
+gross_pay = hours_worked * hourly_rate
+tax_withheld = gross_pay * (tax_rate / 100)
+net_pay = gross_pay - tax_withheld
+
+print(f"Employee: {employee_name}")
+print(f"Gross pay: ${gross_pay:.2f}")
+print(f"Tax withheld: ${tax_withheld:.2f}")
+print(f"Net pay: ${net_pay:.2f}")
 # Then print the four required output lines.
 # The exact format is in README.md. Match it exactly or the tests will fail.
 #
