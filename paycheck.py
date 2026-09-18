@@ -8,6 +8,11 @@ hours = float(input("Hours worked: "))
 rate = float(input("Hourly rate: "))
 tax_rate = float(input("Tax rate: "))
 
+gross = hours * rate
+tax = gross * (tax_rate / 100)
+net = gross - tax
+
+
 # Then calculate:
 #   gross pay     = hours worked * hourly rate
 #   tax withheld  = gross pay * (tax rate / 100)
